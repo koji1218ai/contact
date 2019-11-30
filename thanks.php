@@ -9,12 +9,13 @@ if($_SERVER["REQUEST_METHOD"] != "POST"){
 };
 
 // 入力内容を取得
- $nickname = $_POST['nickname'];
- $email = $_POST['email'];
- $content = $_POST['content'];
+$nickname = $_POST['nickname'];
+$email = $_POST['email'];
+$content = $_POST['content'];
 
- $stmt = $dbh->prepare('INSERT INTO surveys (nickname, email, contact) VALUES (?, ?, ?)');
-$stmt->execute([$nickname, $email, $content]);//?を変数に置き換えてSQLを実行
+$stmt = $dbh->prepare('INSERT INTO surveys (nickname, email, contact) VALUES (?, ?, ?)');
+$stmt->execute([$nickname, $email, $content]);
+//?を変数に置き換えてSQLを実行
 ?>
 
 <!DOCTYPE html>
